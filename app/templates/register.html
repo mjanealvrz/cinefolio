@@ -1,0 +1,148 @@
+
+{% extends "base.html" %}
+
+{% block title %}Create Account | CineFolio{% endblock %}
+
+{% block content %}
+
+<section class="register-page">
+
+    <div class="register-overlay"></div>
+
+    <div class="register-content">
+
+        <!-- LEFT SIDE: REGISTRATION FORM -->
+        <div class="auth-container register-card">
+
+            <div class="register-card-top">
+                <span class="register-card-label">
+                    CINEFOLIO MEMBERSHIP
+                </span>
+
+                <span class="register-status">
+                    <span class="register-status-dot"></span>
+                    JOIN THE ARCHIVE
+                </span>
+            </div>
+
+            <h1>Create your account.</h1>
+
+            <p class="register-description">
+                Start building your personal cinematic archive.
+            </p>
+
+            <form method="POST">
+
+                {{ form.hidden_tag() }}
+
+                <div class="form-group">
+                    {{ form.username.label }}
+
+                    {{ form.username(
+                        class="form-control",
+                        placeholder="Choose a username"
+                    ) }}
+
+                    {% for error in form.username.errors %}
+                        <small class="error">{{ error }}</small>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email.label }}
+
+                    {{ form.email(
+                        class="form-control",
+                        placeholder="Enter your email"
+                    ) }}
+
+                    {% for error in form.email.errors %}
+                        <small class="error">{{ error }}</small>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label }}
+
+                    {{ form.password(
+                        class="form-control",
+                        placeholder="Create a password"
+                    ) }}
+
+                    {% for error in form.password.errors %}
+                        <small class="error">{{ error }}</small>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.confirm_password.label }}
+
+                    {{ form.confirm_password(
+                        class="form-control",
+                        placeholder="Confirm your password"
+                    ) }}
+
+                    {% for error in form.confirm_password.errors %}
+                        <small class="error">{{ error }}</small>
+                    {% endfor %}
+                </div>
+
+                {{ form.submit(
+                    class="btn btn-primary",
+                    value="CREATE ACCOUNT"
+                ) }}
+
+            </form>
+
+            <div class="register-card-footer">
+                <p>
+                    Already have an account?
+                    <a href="{{ url_for('auth.login') }}">
+                        Log in
+                    </a>
+                </p>
+            </div>
+
+            <div class="register-card-bottom">
+                YOUR STORIES. YOUR COLLECTION. YOUR CINEFOLIO.
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE: BRANDING -->
+        <div class="register-intro">
+
+            <span class="register-eyebrow">
+                A NEW CHAPTER BEGINS
+            </span>
+
+            <h2>
+                YOUR STORIES.
+                <span>YOUR UNIVERSE.</span>
+            </h2>
+
+            <p>
+                Every film has a story.
+                Every story leaves a memory.
+                Keep them all in one place.
+            </p>
+
+            <div class="register-decoration">
+                <span></span>
+                <small>WELCOME TO CINEFOLIO</small>
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="register-bottom-text">
+        <span>CINEFOLIO</span>
+        <span>COLLECT. TRACK. REMEMBER.</span>
+    </div>
+
+</section>
+
+{% endblock %}

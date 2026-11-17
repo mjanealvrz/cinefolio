@@ -1,0 +1,2010 @@
+
+/* ==========================================
+   CINEFOLIO
+   DARK CINEMATIC DESIGN SYSTEM
+========================================== */
+
+:root {
+    --background: #070609;
+    --background-secondary: #0b080d;
+
+    --surface: #100c12;
+    --surface-light: #171119;
+
+    --border: rgba(255, 255, 255, 0.09);
+
+    --text: #eee9ed;
+    --muted: #928892;
+
+    --accent: #a52d50;
+    --accent-hover: #c13b63;
+
+    --burgundy: #481522;
+    --purple: #392039;
+
+    --shadow: rgba(0, 0, 0, 0.65);
+}
+
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ==========================================
+   NAVIGATION BAR
+========================================== */
+
+header {
+    position: relative;
+    z-index: 10;
+    background: rgba(7, 6, 9, 0.96);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1400px;
+    min-height: 75px;
+
+    margin: auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #f5edf2;
+
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.nav-links a {
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #e9a0b6;
+}
+
+.nav-links span {
+    color: var(--text);
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+    padding: 40px 5%;
+}
+
+
+/* ==========================================
+   FLASH MESSAGES
+========================================== */
+
+.flash-message {
+    padding: 13px 17px;
+    margin-bottom: 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--surface);
+    font-size: 13px;
+}
+
+.flash-message.success {
+    border-color: rgba(70, 160, 110, 0.4);
+}
+
+.flash-message.danger {
+    border-color: rgba(190, 55, 75, 0.5);
+}
+
+.flash-message.info {
+    border-color: rgba(110, 110, 180, 0.4);
+}
+
+
+/* ==========================================
+   AUTHENTICATION FORMS
+========================================== */
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 38px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: 0 20px 60px var(--shadow);
+}
+
+.auth-container h2 {
+    margin-bottom: 8px;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.auth-container > p {
+    margin-bottom: 28px;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: #d9cfd7;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px 15px;
+
+    background: #09070b;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 7px;
+
+    color: var(--text);
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+.form-control::placeholder {
+    color: #706873;
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(165, 45, 80, 0.12);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 8px 25px rgba(165, 45, 80, 0.25);
+}
+
+.auth-link {
+    margin-top: 25px;
+
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.auth-link a {
+    color: #e18ba5;
+}
+
+.error {
+    display: block;
+    margin-top: 6px;
+
+    color: #ef8199;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   CINEMATIC LOGIN PAGE
+========================================== */
+
+.login-page {
+    position: relative;
+
+    width: 100vw;
+    min-height: calc(100vh - 75px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: -40px;
+    margin-bottom: -40px;
+
+    padding: 70px 8% 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #050306;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 2, 4, 0.90) 0%,
+            rgba(5, 3, 5, 0.60) 43%,
+            rgba(3, 2, 4, 0.86) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(3, 2, 4, 0.88) 0%,
+            transparent 55%,
+            rgba(3, 2, 4, 0.25) 100%
+        ),
+        url("../images/login-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-overlay {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            transparent 20%,
+            rgba(0, 0, 0, 0.42) 100%
+        );
+}
+
+.login-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+
+/* ==========================================
+   LOGIN INTRO
+========================================== */
+
+.login-intro {
+    max-width: 590px;
+    flex: 1;
+}
+
+.login-eyebrow {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    color: #d18a9e;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.login-intro h1 {
+    margin-bottom: 24px;
+
+    color: #f4edf0;
+
+    font-size: clamp(43px, 6vw, 78px);
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.login-intro h1 span {
+    display: block;
+
+    color: #bd496a;
+
+    text-shadow: 0 0 35px rgba(155, 40, 70, 0.25);
+}
+
+.login-intro > p {
+    max-width: 470px;
+
+    color: #c0b5bc;
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+.login-decoration {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 42px;
+
+    color: #b48a99;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.login-decoration span {
+    width: 35px;
+    height: 1px;
+
+    background: #a43d5c;
+}
+
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
+
+.login-card {
+    flex: 0 0 420px;
+
+    padding: 38px;
+
+    background: rgba(8, 6, 9, 0.88);
+
+    border: 1px solid rgba(197, 105, 132, 0.19);
+    border-radius: 12px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.75),
+        0 0 35px rgba(85, 18, 39, 0.12);
+}
+
+.login-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-bottom: 34px;
+}
+
+.login-card-label {
+    color: #d18ca0;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.login-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #8c858b;
+
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: #9b4a63;
+
+    box-shadow: 0 0 8px rgba(190, 65, 100, 0.7);
+}
+
+.login-card h2 {
+    color: #f2e9ed;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.login-card .login-description {
+    margin-top: 7px;
+    margin-bottom: 30px;
+
+    color: #968b93;
+    font-size: 12px;
+}
+
+.login-card .form-group label {
+    color: #d5c5cd;
+}
+
+.login-card .form-control {
+    background: rgba(3, 2, 5, 0.85);
+    border-color: rgba(255, 255, 255, 0.11);
+}
+
+.login-card .form-control:focus {
+    border-color: #a63b5b;
+    box-shadow: 0 0 15px rgba(165, 45, 80, 0.13);
+}
+
+.login-card .btn-primary {
+    margin-top: 8px;
+
+    background: linear-gradient(
+        110deg,
+        #75233e,
+        #a33256
+    );
+}
+
+.login-card .btn-primary:hover {
+    background: linear-gradient(
+        110deg,
+        #91304e,
+        #c1466b
+    );
+}
+
+.login-card-footer {
+    margin-top: 26px;
+
+    text-align: center;
+}
+
+.login-card-footer p {
+    color: #958a92;
+    font-size: 11px;
+}
+
+.login-card-footer a {
+    color: #dc8ca5;
+    font-weight: 600;
+}
+
+.login-card-footer a:hover {
+    color: white;
+}
+
+.login-card-bottom {
+    margin-top: 30px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #655a63;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+/* ==========================================
+   LOGIN PAGE BOTTOM TEXT
+========================================== */
+
+.login-bottom-text {
+    position: absolute;
+    z-index: 2;
+
+    right: 8%;
+    bottom: 25px;
+    left: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: rgba(220, 200, 210, 0.45);
+
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard {
+    padding-top: 30px;
+}
+
+.dashboard h1 {
+    margin-bottom: 10px;
+
+    color: var(--text);
+    font-size: 32px;
+}
+
+.dashboard > p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+
+    margin-top: 40px;
+}
+
+.dashboard-card {
+    min-height: 180px;
+    padding: 28px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(165, 45, 80, 0.45);
+    background: var(--surface-light);
+}
+
+.dashboard-card h2 {
+    margin-bottom: 12px;
+
+    color: #e6dce3;
+    font-size: 19px;
+}
+
+.dashboard-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    padding: 22px;
+
+    border-top: 1px solid var(--border);
+
+    color: #6f6670;
+    font-size: 11px;
+    text-align: center;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 950px) {
+
+    .login-content {
+        gap: 35px;
+    }
+
+    .login-intro h1 {
+        font-size: 48px;
+    }
+
+    .login-card {
+        flex-basis: 380px;
+        padding: 30px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .login-page {
+        padding: 55px 6% 80px;
+    }
+
+    .login-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-intro {
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .login-intro h1 {
+        font-size: 43px;
+    }
+
+    .login-intro > p {
+        margin: auto;
+    }
+
+    .login-decoration {
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 440px;
+        flex-basis: auto;
+    }
+
+    .login-bottom-text {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 13px;
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .login-intro h1 {
+        font-size: 35px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+/* ==========================================
+   CINEFOLIO - REGISTER PAGE
+   SEPARATE RED ANGEL BACKGROUND
+========================================== */
+
+.register-page {
+    position: relative;
+
+    width: 100vw;
+    min-height: calc(100vh - 75px);
+
+    margin-left: calc(50% - 50vw);
+    margin-top: -40px;
+    margin-bottom: -40px;
+
+    padding: 55px 8% 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #030203;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 2, 3, 0.12) 0%,
+            rgba(3, 2, 3, 0.05) 55%,
+            rgba(3, 2, 3, 0.25) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.65),
+            transparent 45%
+        ),
+        url("../images/register-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.register-overlay {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle at 50% 50%,
+        transparent 25%,
+        rgba(0, 0, 0, 0.35) 100%
+    );
+}
+
+.register-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+/* ==========================================
+   REGISTER FORM CARD
+========================================== */
+
+.register-card {
+    flex: 0 0 440px;
+
+    padding: 35px;
+
+    background: rgba(7, 5, 7, 0.91);
+
+    border: 1px solid rgba(174, 49, 69, 0.23);
+    border-radius: 12px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(110, 15, 30, 0.12);
+}
+
+.register-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+.register-card-label {
+    color: #c45b6a;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.register-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #81757a;
+
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.register-status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #a22e42;
+    box-shadow: 0 0 9px rgba(190, 45, 65, 0.7);
+}
+
+.register-card h1 {
+    margin-bottom: 8px;
+
+    color: #f2e9eb;
+
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.register-description {
+    margin-bottom: 25px;
+
+    color: #95878d;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.register-card .form-group {
+    margin-bottom: 17px;
+}
+
+.register-card .form-group label {
+    color: #d3c5c9;
+}
+
+.register-card .form-control {
+    background: rgba(2, 2, 3, 0.85);
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+.register-card .form-control:focus {
+    border-color: #a33249;
+
+    box-shadow:
+        0 0 0 3px rgba(163, 50, 73, 0.12);
+}
+
+.register-card .btn-primary {
+    margin-top: 8px;
+
+    background: linear-gradient(
+        110deg,
+        #70202e,
+        #a32e45
+    );
+}
+
+.register-card .btn-primary:hover {
+    background: linear-gradient(
+        110deg,
+        #8d293b,
+        #c23d57
+    );
+
+    box-shadow: 0 8px 25px rgba(163, 46, 69, 0.2);
+}
+
+
+/* ==========================================
+   REGISTER CARD FOOTER
+========================================== */
+
+.register-card-footer {
+    margin-top: 23px;
+
+    text-align: center;
+}
+
+.register-card-footer p {
+    color: #95878d;
+    font-size: 11px;
+}
+
+.register-card-footer a {
+    color: #d66d80;
+    font-weight: 600;
+}
+
+.register-card-footer a:hover {
+    color: #ffffff;
+}
+
+.register-card-bottom {
+    margin-top: 25px;
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #65575c;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+
+/* ==========================================
+   REGISTER INTRO
+========================================== */
+
+.register-intro {
+    flex: 1;
+    max-width: 520px;
+
+    text-align: right;
+}
+
+.register-eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+
+    color: #c76b78;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.register-intro h2 {
+    margin-bottom: 20px;
+
+    color: #f1e9eb;
+
+    font-size: clamp(35px, 4.5vw, 62px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.register-intro h2 span {
+    display: block;
+
+    color: #c34b60;
+
+    text-shadow: 0 0 30px rgba(160, 35, 55, 0.25);
+}
+
+.register-intro > p {
+    max-width: 420px;
+    margin-left: auto;
+
+    color: #c1b1b6;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.register-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 35px;
+
+    color: #b7838d;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.register-decoration span {
+    width: 35px;
+    height: 1px;
+
+    background: #a33249;
+}
+
+
+/* ==========================================
+   REGISTER BOTTOM TEXT
+========================================== */
+
+.register-bottom-text {
+    position: absolute;
+    z-index: 2;
+
+    right: 8%;
+    bottom: 23px;
+    left: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: rgba(220, 195, 200, 0.45);
+
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   REGISTER RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 950px) {
+
+    .register-content {
+        gap: 35px;
+    }
+
+    .register-card {
+        flex-basis: 390px;
+        padding: 28px;
+    }
+
+    .register-intro h2 {
+        font-size: 38px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .register-page {
+        padding: 45px 6% 80px;
+        background-position: 65% center;
+    }
+
+    .register-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .register-card {
+        width: 100%;
+        max-width: 440px;
+        flex-basis: auto;
+    }
+
+    .register-intro {
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .register-intro h2 {
+        font-size: 38px;
+    }
+
+    .register-intro > p {
+        margin: auto;
+    }
+
+    .register-decoration {
+        justify-content: center;
+    }
+
+    .register-bottom-text {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .register-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .register-intro h2 {
+        font-size: 31px;
+    }
+
+}
+
+/* ==========================================
+   CINEFOLIO - CINEMATIC MOTION EFFECTS
+========================================== */
+
+/* Slowly move the background artwork */
+
+.login-page,
+.register-page {
+    animation: cinematicBackground 28s ease-in-out infinite alternate;
+    background-size: 105% 105%;
+}
+
+@keyframes cinematicBackground {
+    0% {
+        background-position: 48% 50%;
+    }
+
+    100% {
+        background-position: 53% 50%;
+    }
+}
+
+
+/* ==========================================
+   AMBIENT RED LIGHT EFFECT
+========================================== */
+
+.login-page::before,
+.register-page::before {
+    content: "";
+
+    position: absolute;
+    inset: -20%;
+
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 25% 35%,
+            rgba(135, 20, 43, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 75% 65%,
+            rgba(95, 15, 35, 0.18),
+            transparent 35%
+        );
+
+    opacity: 0.8;
+
+    animation: ambientGlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes ambientGlow {
+    0% {
+        transform: translate(-2%, -1%) scale(1);
+        opacity: 0.45;
+    }
+
+    100% {
+        transform: translate(2%, 1%) scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* ==========================================
+   GLASS CARD INTERACTION
+========================================== */
+
+.login-card,
+.register-card {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.login-card:hover,
+.register-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(190, 65, 95, 0.5);
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(155, 35, 65, 0.16);
+}
+
+
+/* ==========================================
+   BUTTON HOVER EFFECT
+========================================== */
+
+.login-card .btn-primary,
+.register-card .btn-primary {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.login-card .btn-primary:hover,
+.register-card .btn-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(185, 50, 85, 0.35),
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.login-card .btn-primary:active,
+.register-card .btn-primary:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   INPUT FOCUS EFFECT
+========================================== */
+
+.login-card .form-control,
+.register-card .form-control {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.login-card .form-control:focus,
+.register-card .form-control:focus {
+    background: rgba(15, 7, 11, 0.95);
+
+    border-color: #bd4665;
+
+    box-shadow:
+        0 0 0 2px rgba(189, 70, 101, 0.12),
+        0 0 18px rgba(189, 70, 101, 0.12);
+}
+
+
+/* ==========================================
+   TEXT REVEAL
+========================================== */
+
+.login-intro,
+.register-intro {
+    animation: cinematicReveal 1.2s ease both;
+}
+
+.login-card,
+.register-card {
+    animation: cinematicCardReveal 1.1s ease both;
+}
+
+@keyframes cinematicReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cinematicCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .login-page,
+    .register-page,
+    .login-page::before,
+    .register-page::before,
+    .login-intro,
+    .register-intro,
+    .login-card,
+    .register-card {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================
+   CINEFOLIO - PARTICLE CANVAS
+========================================== */
+
+.login-page,
+.register-page {
+    isolation: isolate;
+}
+
+.particle-canvas {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+/* Keep page content above particles */
+
+.login-overlay,
+.register-overlay {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.login-content,
+.register-content,
+.login-bottom-text,
+.register-bottom-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .particle-canvas {
+        display: none;
+    }
+
+}
+/* Restore bottom text positioning */
+
+.login-bottom-text,
+.register-bottom-text {
+    position: absolute !important;
+
+    right: 8%;
+    bottom: 23px;
+    left: 8%;
+
+    z-index: 5 !important;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Keep content above the background effects */
+
+.login-content,
+.register-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Keep the background overlay behind particles */
+
+.login-overlay,
+.register-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Make the registration angel artwork unobstructed */
+
+.register-intro {
+    display: none;
+}
+
+/* Give the registration card a little more breathing room */
+
+.register-content {
+    justify-content: flex-start;
+}
+
+.register-card {
+    margin-left: 0;
+}
+
+/* ==========================================
+   PARTICLE CANVAS - VISIBILITY FIX
+========================================== */
+
+.login-page,
+.register-page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.particle-canvas {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    z-index: 2 !important;
+
+    display: block;
+
+    pointer-events: none;
+}
+
+/* Content remains above particles */
+
+.login-content,
+.register-content,
+.login-bottom-text,
+.register-bottom-text {
+    z-index: 3 !important;
+}
+
+/* Background overlay remains behind particles */
+
+.login-overlay,
+.register-overlay {
+    z-index: 1 !important;
+}
+
+/* Don't animate for users who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .particle-canvas {
+        display: none !important;
+    }
+
+}
+
+/* ==========================================
+   CINEFOLIO - RESPONSIVE WEB DESIGN
+   Flexible screen and browser zoom support
+========================================== */
+
+/* Prevent unwanted horizontal scrolling */
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* Make images and media flexible */
+
+img,
+video,
+canvas {
+    max-width: 100%;
+}
+
+/* Make page sections fit the viewport */
+
+.login-page,
+.register-page {
+    width: 100vw;
+    max-width: 100vw;
+
+    min-height: max(650px, calc(100svh - 75px));
+
+    margin-left: calc(50% - 50vw);
+
+    padding-left: clamp(20px, 6vw, 100px);
+    padding-right: clamp(20px, 6vw, 100px);
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* Flexible content containers */
+
+.login-content,
+.register-content {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: auto;
+
+    gap: clamp(25px, 5vw, 70px);
+}
+
+/* Flexible login and register cards */
+
+.login-card,
+.register-card {
+    width: min(100%, 440px);
+    flex-shrink: 1;
+}
+
+/* Responsive headings */
+
+.login-intro h1 {
+    font-size: clamp(36px, 5vw, 78px);
+}
+
+.register-intro h2 {
+    font-size: clamp(32px, 4.5vw, 62px);
+}
+
+/* ==========================================
+   LAPTOPS
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .login-page,
+    .register-page {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .login-content,
+    .register-content {
+        gap: 35px;
+    }
+
+    .login-card,
+    .register-card {
+        max-width: 400px;
+    }
+
+    .login-intro {
+        max-width: 480px;
+    }
+
+}
+
+/* ==========================================
+   SMALL LAPTOPS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .login-content,
+    .register-content {
+        gap: 25px;
+    }
+
+    .login-intro h1 {
+        font-size: clamp(34px, 5vw, 48px);
+    }
+
+    .register-card {
+        max-width: 370px;
+        padding: 25px;
+    }
+
+}
+
+/* ==========================================
+   TABLETS AND MOBILE
+========================================== */
+
+@media (max-width: 750px) {
+
+    .login-page,
+    .register-page {
+        min-height: auto;
+
+        padding: 55px 20px 75px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .login-content,
+    .register-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 35px;
+    }
+
+    .login-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-intro > p {
+        margin: auto;
+    }
+
+    .login-decoration {
+        justify-content: center;
+    }
+
+    .login-card,
+    .register-card {
+        width: 100%;
+        max-width: 440px;
+        flex-basis: auto;
+    }
+
+    .register-intro {
+        display: none;
+    }
+
+    .login-bottom-text,
+    .register-bottom-text {
+        position: relative !important;
+
+        inset: auto;
+
+        width: 100%;
+
+        margin-top: 35px;
+
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 0 16px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 10px;
+    }
+
+    .container {
+        padding: 25px 16px;
+    }
+
+    .login-intro h1 {
+        font-size: clamp(32px, 9vw, 42px);
+    }
+
+    .login-card,
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .login-card h2,
+    .register-card h1 {
+        font-size: 25px;
+    }
+
+    .login-bottom-text,
+    .register-bottom-text {
+        justify-content: center;
+        font-size: 7px;
+    }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY AND ZOOM SUPPORT
+========================================== */
+
+input,
+button,
+textarea,
+select {
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* ==========================================
+   CINEFOLIO - AUTHENTICATION LAYOUT FIX
+========================================== */
+
+/* Prevent horizontal overflow */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Remove the normal dashboard container limits
+   on login and registration pages */
+
+main.container:has(.login-page),
+main.container:has(.register-page) {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Authentication pages fill the available screen */
+
+.login-page,
+.register-page {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    min-height: calc(100svh - 60px);
+
+    margin: 0;
+    padding: clamp(35px, 5vw, 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    gap: clamp(25px, 5vw, 80px);
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Keep the login background image */
+
+.login-page {
+    background-position: center;
+}
+
+/* Keep the registration background image */
+
+.register-page {
+    background-position: center;
+}
+
+/* Keep content above background effects */
+
+.login-intro,
+.login-card,
+.register-intro,
+.register-card {
+    position: relative;
+    z-index: 3;
+}
+
+/* Login introduction */
+
+.login-intro {
+    width: min(45%, 520px);
+    flex-shrink: 1;
+}
+
+/* Registration card */
+
+.register-card {
+    width: min(100%, 430px);
+    flex-shrink: 0;
+}
+
+/* Login card */
+
+.login-card {
+    width: min(100%, 430px);
+    flex-shrink: 0;
+}
+
+/* Keep forms inside their cards */
+
+.login-card form,
+.register-card form {
+    width: 100%;
+}
+
+.login-card input,
+.register-card input {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Floating flash notifications */
+
+main.container:has(.login-page) > .flash-message,
+main.container:has(.register-page) > .flash-message {
+    position: fixed;
+
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    width: min(90%, 600px);
+
+    margin: 0;
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    background: rgba(20, 12, 19, 0.96);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Bottom decorative text */
+
+.login-bottom-text,
+.register-bottom-text {
+    position: absolute;
+    bottom: 22px;
+
+    left: 7%;
+    right: 7%;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide the general footer on authentication pages.
+   The pages already have their own decorative footer text. */
+
+body:has(.login-page) > footer,
+body:has(.register-page) > footer {
+    display: none;
+}
+
+/* ==========================================
+   TABLET LAYOUT
+========================================== */
+
+@media (max-width: 900px) {
+
+    .login-page,
+    .register-page {
+        padding: 40px 4%;
+        gap: 25px;
+    }
+
+    .login-intro {
+        width: 45%;
+    }
+
+    .login-card,
+    .register-card {
+        width: min(100%, 390px);
+    }
+
+}
+
+/* ==========================================
+   MOBILE LAYOUT
+========================================== */
+
+@media (max-width: 700px) {
+
+    .login-page,
+    .register-page {
+        min-height: calc(100svh - 60px);
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 45px 20px 65px;
+
+        gap: 30px;
+    }
+
+    .login-intro {
+        width: 100%;
+        max-width: 480px;
+        text-align: center;
+    }
+
+    .login-card,
+    .register-card {
+        width: 100%;
+        max-width: 440px;
+        flex-shrink: 1;
+    }
+
+    .login-bottom-text,
+    .register-bottom-text {
+        position: relative;
+
+        inset: auto;
+
+        width: 100%;
+        margin-top: 10px;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .login-page,
+    .register-page {
+        padding: 30px 14px 45px;
+    }
+
+    .login-card,
+    .register-card {
+        padding: 22px 18px;
+    }
+
+    .login-intro h1 {
+        font-size: clamp(32px, 10vw, 42px);
+    }
+
+}

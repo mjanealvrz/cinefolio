@@ -1,18 +1,35 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReelTrack | Dashboard</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>Welcome to ReelTrack</h1>
+{% block title %}Dashboard | CineFolio{% endblock %}
 
-    <p>Your personal cinema journal starts here.</p>
+{% block content %}
 
-    <h2>Track what you watch.</h2>
+<section class="dashboard">
 
-</body>
-</html>
+    <h1>Welcome to CineFolio, {{ username }}!</h1>
+
+    <p>Your personal space to track, review, and discover movies and series.</p>
+
+    <div class="dashboard-content">
+
+        <div class="dashboard-card">
+            <h2>My Watchlist</h2>
+            <p>Keep track of the movies and series you want to watch.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>My Reviews</h2>
+            <p>Record your thoughts and ratings for the films you've watched.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Discover</h2>
+            <p>Explore your next favorite movie or series.</p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
